@@ -51,7 +51,7 @@ class SerialDataApp(tk.Tk):
 
     def read_from_serial(self):
         try:
-            ser = serial.Serial('COM12', 115200, timeout=1)
+            ser = serial.Serial('COM13', 115200, timeout=1)
             while self.running:
                 line = ser.readline().decode('utf-8').strip()
                 self.parse_and_update(line)
